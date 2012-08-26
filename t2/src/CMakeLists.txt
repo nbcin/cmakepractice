@@ -1,1 +1,4 @@
 ADD_EXECUTABLE(hello main.c)
+
+# install
+INSTALL(TARGETS hello RUNTIME DESTINATION bin)
