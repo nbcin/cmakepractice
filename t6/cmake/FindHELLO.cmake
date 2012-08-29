@@ -1,0 +1,13 @@
+FIND_PATH(HELLO_INCLUDE hello.h /usr/include /usr/local/include/)
+FIND_LIBRARY(HELLO_LIBRARY NAMES hello /usr/lib /usr/local/lib)
+
+IF (HELLO_INCLUDE AND HELLO_LIBRARY)
+    SET(HELLO_FOUND TRUE)
+    IF (NOT HELLO_FIND_QUIETLY)
+        MESSAGE(STATUS "Found HELLO: ${HELLO_LIBRARY}")
+    ENDIF()
+ELSE()
+    IF (HELLO_FIND_REQUIRED)
+        MESSAGE(FATAL_ERROR "No found HELLO.")
+    ENDIF()
+ENDIF()
