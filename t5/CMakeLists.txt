@@ -1,0 +1,3 @@
+PROJECT(CURLTEST)
+ADD_EXECUTABLE(curltest main.c)
+TARGET_LINK_LIBRARIES(curltest curl)
